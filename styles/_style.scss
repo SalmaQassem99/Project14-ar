@@ -6,8 +6,9 @@
 $padding: 1.5rem;
 $gap-1: 7rem;
 $gap-2: 10vh;
-$gap-3: 1.5rem;
-$gap-4: 4vh;
+$gap-3: 1rem;
+$gap-4: 2vh;
+$gap-5: 0.5rem;
 %fixed-position {
   position: fixed;
   top: 50%;
@@ -381,6 +382,11 @@ $gap-4: 4vh;
         @include mediaQuery($medScreen_min_width) {
           & {
             max-height: calc((100% - $gap-1) * 0.8);
+            gap: $gap-5;
+          }
+        }
+        @include mediaQuery($largeScreen_min_width) {
+          & {
             gap: $gap-3;
           }
         }
@@ -410,7 +416,7 @@ $gap-4: 4vh;
             }
             .img-wrapper {
               width: 80%;
-              padding: 3vh;
+              padding: 2vh;
               background-color: $white-1;
               position: relative;
               transform-style: preserve-3d;
@@ -501,10 +507,16 @@ $gap-4: 4vh;
       }
       .match-cards {
         max-height: calc((100% - $gap-2) * 0.2);
-        gap: $gap-3;
+        gap: $gap-4;
         @include mediaQuery($medScreen_min_width) {
           & {
             max-height: calc((100% - $gap-1) * 0.2);
+            gap: $gap-5;
+          }
+        }
+        @include mediaQuery($largeScreen_min_width) {
+          & {
+            gap: $gap-3;
           }
         }
         .match-card-wrapper {
